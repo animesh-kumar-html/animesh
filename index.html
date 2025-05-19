@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animesh Kumar - Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(270deg, #ff416c, #ff4b2b, #6a11cb, #2575fc);
+      background-size: 800% 800%;
+      animation: gradientBG 15s ease infinite;
+      color: #333;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h2 {
+      font-size: 24px;
+      color: #2575fc;
+    }
+      .header-profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid #2575fc;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.header-profile-img.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #6a11cb;
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #2575fc;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.profile-img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+    h1 {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      height: 24px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    .social-links a:hover {
+      color: #6a11cb;
+      transform: scale(1.1);
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      margin-bottom: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .profile-img {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  <div style="display: flex; align-items: center;">
+    <img src="img1.jpg" alt="Animesh Photo" class="header-profile-img" />
+    <h2>Animesh</h2>
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#address">Address</a>
+  </nav>
+</header>
+
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="info-box">
+      <img src="img1.jpg" alt="Animesh Photo" class="profile-img" />
+      <h1 id="userName">Animesh Kumar</h1>
+      <h2 id="userTitle"></h2>
+      <p id="userBio"></p>
+<!-- Inside .social-links and Contact sections -->
+<div class="social-links">
+  <a href="https://www.instagram.com/animesh_kumar36?igsh=cXp1eDZnenllZm1w" id="instagram" target="_blank">Instagram</a>
+  <a href="https://www.snapchat.com/add/animesh_kumar63?share_id=7FdcfcmdT4c&locale=en-IN" id="snapchat" target="_blank">Snapchat</a>
+  <a href="mailto:animeshkumar.ak36@gmail.com" id="email" target="_blank">Email</a>
+</div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="info-box">
+      <h1>About Me</h1>
+      <p>
+        I'm a 12-year-old student based in India, just starting my journey into the world of web development.
+        I enjoy experimenting with HTML, CSS, and JavaScript, and love to bring ideas to life through code.
+        My goal is to become a full-stack developer and work on exciting, real-world projects.
+      </p>
+    </div>
+  </section>
+
+ <!-- Contact Section -->
+<section id="contact">
+  <div class="info-box">
+    <h1>Contact Me</h1>
+    <p>📧 Email: <a href="mailto:animeshkumar.ak36@gmail.com" id="email2">animeshkumar.ak36@gmail.com</a></p>
+    <p>📸 Instagram: <a href="https://www.instagram.com/animesh_kumar36?igsh=cXp1eDZnenllZm1w" id="instagram2" target="_blank">Instagram Profile</a></p>
+    <p>👻 Snapchat: <a href="https://www.snapchat.com/add/animesh_kumar63?share_id=7FdcfcmdT4c&locale=en-IN" id="snapchat2" target="_blank">Snapchat Profile</a></p>
+  </div>
+</section>
+
+
+  <!-- Address Section -->
+  <section id="address">
+    <div class="info-box">
+      <h1>My Address</h1>
+      <p>🏠 City: Dehri-on-Sone, Rohtas, Bihar, India</p>
+      <p>🌍 Country: India</p>
+      <p>📮 Zip Code: 821305</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115109.1662282629!2d84.14798281231952!3d24.901994600000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398c66b6885a7edb%3A0x100fb932b4bdb9b7!2sDehri%20On%20Sone%2C%20Bihar%20821305!5e0!3m2!1sen!2sin!4v1716043796784!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+    <!-- Write to Me Section -->
+<section id="message">
+  <div class="info-box">
+    <h1>Write to Me</h1>
+    <form action="mailto:animeshkumar.ak36@gmail.com" method="POST" enctype="text/plain">
+      <div style="margin-bottom: 15px;">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"
+        />
+      </div>
+      <div style="margin-bottom: 15px;">
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"
+        />
+      </div>
+      <div style="margin-bottom: 15px;">
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          required
+          rows="5"
+          style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        style="background-color: #2575fc; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer;"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+  <!-- JavaScript for dynamic content and typing -->
+  <script>
+      const headerProfile = document.querySelector('.header-profile-img');
+  const homeSection = document.getElementById('home');
+
+  window.addEventListener('scroll', () => {
+    const offset = homeSection.getBoundingClientRect().bottom;
+    if (offset < 80) {
+      headerProfile.classList.add('show');
+    } else {
+      headerProfile.classList.remove('show');
+    }
+  });
+    const profileData = {
+      name: "Animesh Kumar",
+      titles: ["Beginner Web Developer", "HTML & CSS Enthusiast", "Learner from India"],
+      bio: "Hi! I'm Animesh, a beginner web developer from India learning HTML, CSS, and JavaScript. I'm passionate about building simple, clean, and creative websites.",
+      github: "https://github.com/animeshkumar",
+      linkedin: "https://linkedin.com/in/animeshkumar",
+      email: "mailto:animeshkumar.ak36@gmail.com"
+    };
+
+    document.getElementById("userName").textContent = profileData.name;
+    document.getElementById("userBio").textContent = profileData.bio;
+    document.getElementById("github").href = profileData.github;
+    document.getElementById("linkedin").href = profileData.linkedin;
+    document.getElementById("email").href = profileData.email;
+
+    document.getElementById("github2").href = profileData.github;
+    document.getElementById("linkedin2").href = profileData.linkedin;
+    document.getElementById("email2").href = profileData.email;
+    document.getElementById("email2").textContent = profileData.email.replace("mailto:", "");
+
+    // Typing effect
+    let i = 0, j = 0, isDeleting = false;
+    const titleElement = document.getElementById("userTitle");
+
+    function type() {
+      const current = profileData.titles[i % profileData.titles.length];
+      if (!isDeleting) {
+        j++;
+        titleElement.textContent = current.slice(0, j);
+        if (j === current.length) {
+          isDeleting = true;
+          setTimeout(type, 1500);
+        } else {
+          setTimeout(type, 100);
+        }
+      } else {
+        j--;
+        titleElement.textContent = current.slice(0, j);
+        if (j === 0) {
+          isDeleting = false;
+          i++;
+        }
+        setTimeout(type, 60);
+      }
+    }
+    type();
+  </script>
+</body>
+</html>
